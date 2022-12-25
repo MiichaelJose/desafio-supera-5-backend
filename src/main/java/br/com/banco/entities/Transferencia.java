@@ -11,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
@@ -41,6 +40,6 @@ public class Transferencia {
 	
 	@ManyToOne
 	@JoinColumn(name = "conta_id", nullable = false)
-	@JsonBackReference // para evitar o conflito de referência
+	//@JsonBackReference // para evitar o conflito de referência
 	private Conta conta;
 }
